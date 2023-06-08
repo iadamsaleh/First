@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+  {% block body %}
+
+  <div class="container">
+    <h2>Sign UP</h2>
+    <form action="/Signup" method = "POST">
+    {% csrf_token %}
+         <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp">
+  </div>
+      <br>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="text" class="form-control" name="password" id="password">
+  </div>
+      <br>
+  <div>
+    <button type="submit" class="btn btn-primary ">Submit</button>
+  </div>
+      <br>
+
+</form>
+    </div>
+
+  {% endblock body %}
